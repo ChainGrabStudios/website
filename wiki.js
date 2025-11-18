@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Insertar datos
+    document.getElementById('headTitle').textContent = title + ' Wiki';
     document.getElementById('gameTitle').textContent = title;
     document.getElementById('gameTitleHeader').textContent = title;
     document.getElementById('gameWiki').textContent = wiki;
