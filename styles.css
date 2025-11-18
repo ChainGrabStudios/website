@@ -16,17 +16,32 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial;backgr
 .nav{list-style:none;display:flex;gap:1rem;padding:0;margin:0}
 .nav a{color:var(--muted);text-decoration:none}
 .hero{padding:2rem 0}
-.about{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1rem;border-radius:10px;margin-bottom:1rem}
-.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
-.game-card{background:var(--card);padding:.5rem;border-radius:10px;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;outline:none;width: 50%;}
+.about,.games{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1rem;border-radius:10px;margin-bottom:1rem}
+.games-grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.game-card {
+    background: #d2e8ff16;
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: crosshair;
+    transition: transform .15s ease,box-shadow .15s ease;
+    outline: none;
+    width: 100%;
+}
 .game-card:focus, .game-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.5)}
 .thumb{width:100%;height:140px;object-fit:cover;border-radius:8px}
 .card-body{padding:.5rem}
 .card-body h4{margin:.4rem 0 .2rem 0}
 .tag{color:var(--muted);font-size:.9rem}
 .site-footer{padding:1rem 0;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted)}
-.games-grid .game-card img {width: auto; height: 200px; object-fit: contain; display: block; margin: 0 auto; border-radius: 8px;}
- 
+.games-grid .game-card img {
+    height: 15rem;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    align-content: start;
+}
 /* Modal */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.7);padding:1rem}
 .modal[aria-hidden="false"]{display:flex}
