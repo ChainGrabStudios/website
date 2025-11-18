@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./images/CGS_Logo-icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./images/CGS_Logo-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
   <title>ChainGrabSTUDIOS</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #121212;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1f1f1f;
-      padding: 20px;
-    }
-    h1 {
-      color: #00ffcc;
-    }
-    p {
-      font-size: 18px;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to ChainGrab, link your passion to the game</h1>
-    <img src="./images/CGS_Logo.png" alt="Logo de la empresa" width="200">
+  <!-- Header (si quieres contenido en encabezado, añádelo aquí) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="./images/CGS_Logo-icon.png" alt="Logo" class="logo"
+          style="width:40px;height:40px;border-radius:6px" />
+        <h1>ChainGrabSTUDIOS</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#games">Games</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <p>We are creating new game experiences for players that want something new.</p>
-  <footer>
-    © 2025 ChainGrabStudios
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-inner" style="display:flex;align-items:center;gap:1rem;">
+        <div>
+          <h1>Welcome to ChainGrab, link your passion to the game</h1>
+          <p>We are creating new game experiences for players that want something new.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About us</h2>
+      <p>We are a little team dedicated to create single quality games. We want to create a connexion beetween our players and games.</p>
+    </section>
+
+    <section id="games" class="container games">
+      <h2>GAMES</h2>
+      <div class="games-grid" id="gamesGrid">
+        <article class="game-card" tabindex="0" role="button" aria-pressed="false" data-title="Elemental"
+          data-wiki="Elemental is...\nCaracterísticas: mapas, jefes y coleccionables."
+          data-download="downloads/pixeland.zip">
+          <img src="./images/LoginBG.png" alt="Thumbnail PixelLand" class="thumb" />
+          <div class="card-body">
+            <h4>Elemental</h4>
+            <p class="tag">Platform FIghter Gacha · 2025</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer container">
+    <p>Contact: chaingrabstudios@gmail.com · © <span id="year"></span> ChainGrabSTUDIOS</p>
   </footer>
+
+  <!-- Modal para wiki y descarga (cerrado correctamente) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal-close" aria-label="Cerrar">✕</button>
+      <h3 id="modalTitle">Título del juego</h3>
+      <div id="modalWiki" class="modal-wiki">Contenido de la wiki...</div>
+      <div class="modal-actions">
+        <a id="modalDownload" class="btn" href="#" download>Descargar juego</a>
+        <button id="modalExternalWiki" class="btn btn-secondary">Abrir wiki en nueva pestaña</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aquí cargamos el script principal -->
+  <script src="scripts.js"></script>
 </body>
+
 </html>
